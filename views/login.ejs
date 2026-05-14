@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="flex flex-col min-h-screen bg-slate-950">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4 sticky top-0 z-50">
+      <div class="container mx-auto flex items-center justify-between">
+        <a href="/home" class="text-white text-lg font-semibold flex flex-row items-center justify-center"> <img src="/logo.png" height="10" width="30" /> &nbsp Cloud Clone</a>
+        <div class="flex items-center gap-1">
+          <a href="/user/register" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Register</a>
+          <a href="/user/login" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Card -->
+    <div class="flex flex-1 items-center justify-center px-4 py-16">
+      <div class="w-full max-w-sm bg-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg">
+
+        <h1 class="text-2xl font-bold text-white mb-1">Welcome back</h1>
+        <p class="text-zinc-500 text-sm mb-8">Log in to access your files</p>
+
+        <form action="/user/login" method="POST" class="flex flex-col gap-5">
+
+          <div>
+            <label for="gmail" class="block mb-2 text-sm font-medium text-gray-300">Gmail</label>
+            <input
+              type="email"
+              name="gmail"
+              id="gmail"
+              class="bg-slate-900 border border-gray-600 text-white text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2.5 placeholder:text-zinc-600 outline-none transition-colors"
+              placeholder="Enter your Gmail"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="password" class="block mb-2 text-sm font-medium text-gray-300">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="bg-slate-900 border border-gray-600 text-white text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2.5 placeholder:text-zinc-600 outline-none transition-colors"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded-xl px-4 py-2.5 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+          >
+            Log in
+          </button>
+
+        </form>
+
+        <p class="text-zinc-500 text-sm text-center mt-6">
+          Don't have an account?
+          <a href="/user/register" class="text-blue-500 hover:text-blue-400 font-medium transition-colors">Register</a>
+        </p>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  </body>
+</html>
